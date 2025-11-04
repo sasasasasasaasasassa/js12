@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+<div class="container">
+    <h1>Регистрация</h1>
+    <form name="myForm" id="registrationForm" onsubmit="return validateForm(event)">
+        <div class="form-group">
+            <label for="login">Логин: *</label>
+            <input type="text" id="login" name="login">
+            <div id="loginError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль: *</label>
+            <input type="password" id="password" name="password">
+            <div id="passwordError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmation">Подтверждение: *</label>
+            <input type="password" id="confirmation" name="confirmation">
+            <div id="confirmationError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="fullname">Полное имя: *</label>
+            <input type="text" id="fullname" name="fullname">
+            <div id="fullnameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Пол: *</label>
+            <div>
+                <label>
+                    <input type="radio" name="gender" value="М"> М
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Ж"> Ж
+                </label>
+            </div>
+            <div id="genderError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Специализация: *</label>
+            <div>
+                <label>
+                    <input type="checkbox" name="specialization" value="Дизайн"> Дизайн
+                </label>
+                <label>
+                    <input type="checkbox" name="specialization" value="Программирование"> Программирование
+                </label>
+                <label>
+                    <input type="checkbox" name="specialization" value="Администрирование"> Администрирование
+                </label>
+            </div>
+            <div id="specializationError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="position">Должность: *</label>
+            <select id="position" name="position">
+                <option value="">------ Выберите ------</option>
+                <option value="Директор">Директор</option>
+                <option value="Заместитель директора">Заместитель директора</option>
+                <option value="Руководитель проекта">Руководитель проекта</option>
+                <option value="Начальник отдела">Начальник отдела</option>
+                <option value="Программист">Программист</option>
+                <option value="Дизайнер">Дизайнер</option>
+                <option value="Консультант">Консультант</option>
+                <option value="Служащий">Служащий</option>
+            </select>
+            <div id="positionError"></div>
+        </div>
+
+        <div class="form-group_btn">
+            <button type="submit">Регистрация</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
